@@ -1,0 +1,133 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f0f4f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.quiz-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+    width: 450px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 36px;
+    color: #f44336; /* Red color for timer */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.question-container {
+    margin-top: 20px;
+}
+
+.question-text {
+    font-size: 22px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.options {
+    margin-bottom: 30px;
+}
+
+.options-input {
+    display: none;
+}
+
+.option-label {
+    display: block;
+    background-color: #f1f1f1;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.option-label:hover {
+    background-color: #e7e7e7;
+    transform: scale(1.05);
+}
+
+.option-label:active {
+    transform: scale(0.98);
+}
+
+.next-button {
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+}
+
+.next-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.next-button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+.next-button:active {
+    background-color: #45a049;
+    transform: scale(0.98);
+}
+
+/* Timer Styles */
+#timer {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ff9800; /* Orange color for timer */
+    margin-bottom: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+    .quiz-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .question-text {
+        font-size: 20px;
+    }
+
+    .option-label {
+        font-size: 16px;
+    }
+
+    .next-button {
+        font-size: 16px;
+    }
+}
